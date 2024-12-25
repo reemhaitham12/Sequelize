@@ -14,28 +14,29 @@ Comment.init({
     postId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Posts', // Reference table name explicitly
+            model: 'Posts', 
             key: 'id',
         },
     },
     userId: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Users', // Reference table name explicitly
+            model: 'Users', 
             key: 'id',
         },
     },
-    createdAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
+    // createdAt: {
+    //     type: DataTypes.DATE,
+    //     allowNull: false,
+    // },
+    // updatedAt: {
+    //     type: DataTypes.DATE,
+    //     allowNull: false,
+    // },
 }, {
     sequelize,
     modelName: 'Comment',
+    timestamps: true,
 });
 
 export default Comment
